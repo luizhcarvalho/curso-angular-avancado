@@ -40,7 +40,7 @@ export class CategoryFormComponent implements OnInit, AfterContentChecked {
   }
 
   private setCurrentAction() {
-    if (this.route.snapshot.url[0].path == 'new') {
+    if (this.route.snapshot.url[0].path === 'new') {
       this.currentAction = 'new';
     } else {
       this.currentAction = 'edit';

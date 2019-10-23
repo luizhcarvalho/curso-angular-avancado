@@ -35,7 +35,7 @@
           </select>
 
           <div class="text-danger" *ngIf="entryForm.get('type').invalid && entryForm.get('type').touched">
-            <div *ngIf="entryForm.get('type').errors.required">dado obrigatório</div>
+            <div *ngIf="!!entryForm.get('type').errors.required">dado obrigatório</div>
           </div>
         </div>
 
@@ -45,8 +45,8 @@
           <input type="text" class="form-control" id="name" formControlName="name">
 
           <div class="text-danger" *ngIf="entryForm.get('name').invalid && entryForm.get('name').touched">
-            <div *ngIf="entryForm.get('name').errors.required">dado obrigatório</div>
-            <div *ngIf="entryForm.get('name').errors.minlength">deve ter no mínimo 2 caracteres</div>
+            <div *ngIf="!!entryForm.get('name').errors.required">dado obrigatório</div>
+            <div *ngIf="!!entryForm.get('name').errors.minlength">deve ter no mínimo 2 caracteres</div>
           </div>
         </div>
 
@@ -63,7 +63,7 @@
           </div>
 
           <div class="text-danger" *ngIf="entryForm.get('amount').invalid && entryForm.get('amount').touched">
-            <div *ngIf="entryForm.get('amount').errors.required">dado obrigatório</div>
+            <div *ngIf="!!entryForm.get('amount').errors.required">dado obrigatório</div>
           </div>
         </div>
 
@@ -82,7 +82,7 @@
           </p-calendar>
 
           <div class="text-danger" *ngIf="entryForm.get('date').invalid && entryForm.get('date').touched">
-            <div *ngIf="entryForm.get('date').errors.required">dado obrigatório</div>
+            <div *ngIf="!!entryForm.get('date').errors.required">dado obrigatório</div>
           </div>
         </div>
 
@@ -99,7 +99,7 @@
           </div>
 
           <div class="text-danger" *ngIf="entryForm.get('paid').invalid && entryForm.get('paid').touched">
-            <div *ngIf="entryForm.get('paid').errors.required">dado obrigatório</div>
+            <div *ngIf="!!entryForm.get('paid').errors.required">dado obrigatório</div>
           </div>
         </div>
 
@@ -111,7 +111,7 @@
           </select>
 
           <div class="text-danger" *ngIf="entryForm.get('categoryId').invalid && entryForm.get('categoryId').touched">
-            <div *ngIf="entryForm.get('categoryId').errors.required">dado obrigatório</div>
+            <div *ngIf="!!entryForm.get('categoryId').errors.required">dado obrigatório</div>
           </div>
         </div>
         <!-- description -->
@@ -137,3 +137,4 @@
 </form>
 
 <pre>{{entryForm.value | json}}</pre>
+<pre>{{entryForm.get("name").errors | json}}</pre>

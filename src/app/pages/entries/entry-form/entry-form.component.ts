@@ -86,7 +86,7 @@ export class EntryFormComponent implements OnInit, AfterContentChecked {
           value
         };
       }
-    )
+    );
   }
 
   private setCurrentAction() {
